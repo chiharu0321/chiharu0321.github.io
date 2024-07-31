@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社千喜</title>
+     <style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 20px;
+}
+
+header .tagline {
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav {
+    margin-left: auto;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-container .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-group {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.section-group .left {
+    text-align: left;
+}
+
+.section-group .right {
+    text-align: left;
+}
+
+.section-group h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.section-group p {
+    margin: 0;
+    line-height: 1.6;
+    color: #666;
+}
+
+.company-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.company-info .text {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.company-info .column {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.company-info h2 {
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-no-shadow{
+	max-width: 1200px;
+	width: 80%;
+	margin: 50px auto;
+	/* background-color: #fff; */
+	padding: 0 20px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: left;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+footer a, footer .contact-info {
+    color: white;
+    margin: 5px 10px;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+}
+         </style>
+</head>
+<body>
+    <header>
+        <div class="logo">株式会社千喜</div>
+        <div class="tagline">&nbsp;&nbsp;&nbsp;&nbsp;選ぶ喜び、セレクトライフ</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">トップページ</a></li>
+                <li><a href="page2.html">&nbsp;&nbsp;&nbsp;&nbsp;会社案内</a></li>
+                <li><a href="page3.html">&nbsp;&nbsp;&nbsp;&nbsp;業務のご案内</a></li>
+                <li><a href="page4.html">&nbsp;&nbsp;&nbsp;&nbsp;求人情報&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="video-container">
+        <video src="/assets/kyoto-ZyoqsGs-.mp4" autoplay muted loop></video>
+        <div class="overlay"> 会社案内</div>
+    </div>
+    <div class="content">
+        <section id="home">
+			<div class="container-no-shadow">
+				<h1>チャレンジ精神</h1>
+		
+				<div class="section-group">
+					<div class="left">
+						<h3>成長と挑戦</h3>
+					</div>
+					<div class="right">
+						<p>私たちは社員一人ひとりの成長と挑戦を大切にします。若い力を活かし、常に新しいことにチャレンジすることを推奨します。</p>
+					</div>
+				</div>
+		
+				<div class="section-group">
+					<div class="left">
+						<h3>イノベーション</h3>
+					</div>
+					<div class="right">
+						<p>若い力と柔軟な発想を持つ私たちは、常に革新を追求し、次世代のネットワークサービスを創造します。</p>
+					</div>
+				</div>
+		
+				<div class="section-group">
+					<div class="left">
+						<h3>協力とチームワーク</h3>
+					</div>
+					<div class="right">
+						<p>20代、30代の若い社員たちが協力し合い、チームワークを重視して働くことで、高いパフォーマンスを発揮します。</p>
+					</div>
+				</div>
+		
+				<div class="section-group">
+					<div class="left">
+						<h3>顧客第一</h3>
+					</div>
+					<div class="right">
+						<p>私たちはお客様の満足を最優先に考え、常にお客様の期待を超えるサービスを提供します。</p>
+					</div>
+				</div>
+		
+				<div class="section-group">
+					<div class="left">
+						<h3>持続可能性</h3>
+					</div>
+					<div class="right">
+						<p>環境に優しいネットワークソリューションを提供し、持続可能な社会の実現を目指します。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+    </div>
+    <section id="about" class="company-info">
+        <div class="container-no-shadow">
+			<h1>グループ経営方針</h1>
+		
+			<div class="section-group">
+				<div class="left">
+					<h3>お客様第一主義</h3>
+				</div>
+				<div class="right">
+					<p>お客様のニーズに応え、期待を超えるサービスを提供することを最優先とします。</p>
+				</div>
+			</div>
+		
+			<div class="section-group">
+				<div class="left">
+					<h3>イノベーションの推進</h3>
+				</div>
+				<div class="right">
+					<p>常に新しい技術とアイデアを追求し、革新的なソリューションを提供します。</p>
+				</div>
+			</div>
+		
+			<div class="section-group">
+				<div class="left">
+					<h3>社員の成長と幸福</h3>
+				</div>
+				<div class="right">
+					<p>社員一人ひとりの成長と幸福を大切にし、働きやすい環境を整えます。</p>
+				</div>
+			</div>
+		
+			<div class="section-group">
+				<div class="left">
+					<h3>持続可能な社会の実現</h3>
+				</div>
+				<div class="right">
+					<p>環境に配慮した事業活動を推進し、持続可能な社会の実現に貢献します。</p>
+				</div>
+			</div>
+		
+			<div class="section-group">
+				<div class="left">
+					<h3>信頼と透明性</h3>
+				</div>
+				<div class="right">
+					<p>すべてのステークホルダーとの信頼関係を築き、透明性の高い経営を行います。</p>
+				</div>
+			</div>
+		</div>
+    </section>
+	<div class="container">
+	        <h1>企業情報</h1>
+	        <table>
+	            <tr>
+	                <th>法人名称</th>
+	                <td>株式会社千喜</td>
+	            </tr>
+	            <tr>
+	                <th>所在地</th>
+	                <td>京都本社<br>〒605-0874<br>京都市東山区渋谷通東大路東入常盤町 474-4 カーサ稲川101</td>
+	            </tr>
+	            <tr>
+	                <th>TEL</th>
+	                <td>075-741-8389（代表）<br> 075-606-4315</td>
+	            </tr>
+	           
+	            <tr>
+	                <th>メールアドレス</th>
+	                <td>info@chiharu-group.com</td>
+	            </tr>
+	            <tr>
+	                <th>設立</th>
+	                <td>2024年3月</td>
+	            </tr>
+	            <tr>
+	                <th>資本金</th>
+	                <td>500万円</td>
+	            </tr>
+	            <tr>
+	                <th>代表者</th>
+	                <td>代表取締役　鄒汶玲</td>
+	            </tr>
+	            <tr>
+	                <th>従業員</th>
+	                <td>5人</td>
+	            </tr>
+	            <tr>
+	                <th>事業内容</th>
+	                <td>小売・卸売事業<br>輸出入・貿易事業<br>宿泊施設の経営事業<br>国際コンサルティングサービス</td>
+	            </tr>
+	            <tr>
+	                <th>取引銀行</th>
+	                <td>三菱UFJ銀行</td>
+	            </tr>
+	        </table>
+	    </div>
+    <footer>
+       
+        <span class="contact-info">CHIHARUグループ              株式会社千喜             info@chiharu-group.com</span>
+    </footer>
+</body>
+</html>

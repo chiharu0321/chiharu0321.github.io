@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ライブ配信スタッフの募集</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+		header {
+		     display: flex;
+		     justify-content: space-between;
+		     align-items: center;
+		     padding: 10px 20px;
+		     background-color: rgba(0, 0, 0, 0.5); /* 头部栏背景半透明 */
+		     position: fixed; /* 固定头部栏 */
+		     width: 100%;
+		     top: 0;
+		     left: 0;
+		     z-index: 1000;
+		 }
+		 header .logo {
+		     font-size: 24px; /* 设置大字体 */
+		     color: #fff;
+		     margin-right: 20px; /* 文字前面加空格 */
+		 }
+		 header .tagline {
+		     color: #fff;
+		 }
+		 nav ul {
+		     list-style: none;
+		     display: flex;
+		     margin: 0;
+		     padding: 0;
+		 }
+		 nav ul li {
+		     margin-left: 20px;
+		 }
+		 nav ul li a {
+		     text-decoration: none;
+		     color: #fff; /* 设置链接颜色为白色 */
+		 }
+		 nav {
+		     margin-left: auto; /* 将导航栏向左移动 */
+		 }
+		 .video-container {
+		     position: relative;
+		     width: 100%;
+		     height: 60vh;
+		     overflow: hidden;
+		 }
+		 .video-container video {
+		     width: 100%;
+		     height: 100%;
+		     object-fit: cover;
+		 }
+		 .video-container .overlay {
+		     position: absolute;
+		     top: 50%;
+		     left: 50%;
+		     transform: translate(-50%, -50%);
+		     color: #fff;
+		     font-size: 36px;
+		     font-weight: bold;
+		 }
+		 .content {
+		     background-color: #fff;
+		     padding: 20px;
+		     text-align: center; /* 使文字居中 */
+		 }
+		 .company-info {
+		     display: flex;
+		     justify-content: space-between;
+		     align-items: center;
+		     padding: 20px;
+		 }
+		 .company-info img {
+		     flex: 1;
+		     width: 20%;
+		     height: auto;
+		 }
+		 .company-info .text {
+		     flex: 1;
+		     text-align: center;
+		     padding: 20px;
+		 }
+		.company-yofo {
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    padding: 20px;
+		}
+		.company-yofo img {
+		    flex: 1;
+		    width: 100%;
+		    height: auto;
+		}
+		.company-yofo .text {
+		    flex: 1;
+		    text-align: center;
+		    padding: 20px;
+		}
+		 
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* 文字居中 */
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .section p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 5px 0;
+            color: #666;
+        }
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #e91e63;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #d81b60;
+        }
+		
+		footer {
+		    background-color: rgba(0, 0, 0, 0.5);
+		    color: white;
+		    text-align: left;
+		    padding: 10px;
+		    display: flex;
+		    justify-content: space-around; /* 平均分布 */
+		    flex-wrap: nowrap; /* 禁止换行 */
+		}
+		footer a, footer .contact-info, .contact-yofo {
+		    color: white;
+		    margin: 5px 10px;
+		    text-decoration: none;
+		    flex: 1;
+		    text-align: center; /* 文字居中 */
+		}
+    </style>
+</head>
+<body>
+	<header>
+	    <div class="logo">株式会社千喜</div>
+	    <div class="tagline">&nbsp;&nbsp;&nbsp;&nbsp;選ぶ喜び、セレクトライフ</div>
+	    <nav>
+	        <ul>
+	            <li><a href="index.html">トップページ</a></li>
+	            <li><a href="page2.html">&nbsp;&nbsp;&nbsp;&nbsp;会社案内</a></li>
+	            <li><a href="page3.html">&nbsp;&nbsp;&nbsp;&nbsp;業務のご案内</a></li>
+	            <li><a href="page4.html">&nbsp;&nbsp;&nbsp;&nbsp;求人情報&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+	        </ul>
+	    </nav>
+	</header>
+	<div class="video-container">
+	    <video src="/assets/kyoto-ZyoqsGs-.mp4" autoplay muted loop></video>
+	    <div class="overlay"> ライブ配信スタッフの募集</div>
+	</div>
+    <div class="container">
+        <h1>ライブ配信スタッフの募集</h1>
+        <div class="section">
+            <h2>🍬仕事内容:</h2>
+            <p class="highlight">【未経験者歓迎】ライブ配信スタッフの募集（DIYパーツ商品）</p>
+        </div>
+        <div class="section">
+            <h2>🍬仕事内容:</h2>
+            <p>弊社の商品をLIVE配信にてご紹介していただくお仕事となります。 弊社のSNSアカウントからLIVE配信をして頂き、<br><br>商品の販売を行っていただきます。DIYパーツやネイルパーツとかのライブ配信をしていただくため物作り、<br><br>DIYが好きな方にはぴったりなお仕事です！ 未経験でも今後LIVE配信をやってみたい方の応募もOKです！</p>
+        </div>
+        <div class="section">
+            <h2>🍬[この仕事のやりがい]</h2>
+            <p>LIVE配信を手伝ってくれる方を募集しております。 20代～30代～雰囲気が良い職場。<br><br>職場服装、髪型自由で楽しみながらお仕事ができます。</p>
+        </div>
+        <div class="section">
+            <h2>🍬[対象となる方]</h2>
+            <p>Instagram・TikTokなどLIVE配信をした事がある方、SNSを日頃から使用している方、<br><br>DIY·ものつくりが好きな方・おしゃれが好きな方 ※もちろん未経験の方でもライブ配信をやってみたいという方は大歓迎です！</p>
+        </div>
+        <div class="section">
+            <h2>🍬給与</h2>
+            <p>時給1,150円～<br>1日4h以内OK 週2～3日からOK</p>
+        </div>
+        <div class="section">
+            <h2>🍬休日休暇</h2>
+            <p>シフト制のため自由に休みを取得できます。</p>
+        </div>
+        <div class="section">
+            <h2>🍬勤務地</h2>
+            <p>カーサ稲川101号室　株式会社千喜</p>
+        </div>
+        <div class="section">
+            <h2>福利厚生</h2>
+            <ul>
+                <li>◇ 交通費支給あり</li>
+                <li>◇ 服装自由</li>
+                <li>◇ ネイル/ピアスOK</li>
+                <li>◇ 髪色/髪型自由</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>🍬求める経験</h2>
+            <p>既卒・第二新卒歓迎 副業・WワークOK 未経験OK 学生OK 学歴不問 ・Instagram・TikTokなどLIVE配信をした事がある方、
+			<br>SNSを日頃から使用している方活躍中！ ・自身の撮影投稿が可能な方活躍中！ ・DIYが好きな活躍中！</p>
+        </div>
+        <div class="section">
+            <p>興味のある方は、履歴書をメールで <a href="mailto:info@chiharu-group.com" class="button">info@chiharu-group.com</a> に送信するか、会社のポスト📮に投函してください。</p>
+        </div>
+    </div>
+	<footer>
+	   <span class="contact-info">CHIHARUグループ              株式会社千喜             info@chiharu-group.com</span>
+	</footer>
+</body>
+</html>
