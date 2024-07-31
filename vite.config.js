@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  base: '/LandingPage/',
+  base: '/chiharu0321.github.io/',
   plugins: [vue()],
   build: {
     rollupOptions: {
