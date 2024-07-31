@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社千喜</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: "游ゴシック", "Yu Gothic", sans-serif; /* 修改字体 */
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* 头部栏背景半透明 */
+            position: fixed; /* 固定头部栏 */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 36px; /* 设置大字体 */
+            color: #fff;
+            margin-right: 20px; /* 文字前面加空格 */
+        }
+        header .tagline {
+            color: #fff;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff; /* 设置链接颜色为白色 */
+        }
+        nav {
+            margin-left: auto; /* 将导航栏向左移动 */
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .video-container .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+		.video-container .overlay h5 {
+			margin: 0; /* 调整上下间距 */
+			}
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center; /* 使文字靠左 */
+            padding-left: 1px; /* 留一些空隙 */
+        }
+        .content h3, .content h1, .content img {
+            text-align: center; /* 居中对齐 */
+        }
+	    .content h3, .content h1 {
+		            margin: 0; /* 调整上下间距 */
+		        }
+		.content img {
+			 flex: 1;
+			 width: auto; /* 确保图片宽度 */
+			 height: auto;
+			 text-align: center; /* 图片靠左 */
+			 margin: 0; /* 确保没有空隙 */
+			 padding: 0; /* 确保没有填充 */
+			 display: block; /* 确保图片是块级元素 */
+			}
+        .company-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* 确保图片和文字顶部对齐 */
+    padding: 1px;
+         }
+		 .company-info h2 {
+			 margin: 0; /* 调整上下间距 */
+			 }
+        .company-info .text {
+    flex: 1;
+    text-align: center; /* 使文字靠左 */
+    padding-left: 1px; /* 留一些空隙 */
+         }
+        .company-info img {
+            flex: 1;
+            width: 100%; /* 确保图片宽度 */
+            max-width: 100%; /* 确保图片不超过屏幕宽度 */
+            height: auto;
+            text-align: center; /* 图片靠左 */
+            margin: 0; /* 确保没有空隙 */
+            padding: 0; /* 确保没有填充 */
+            display: block; /* 确保图片是块级元素 */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: left;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around; /* 平均分布 */
+            flex-wrap: nowrap; /* 禁止换行 */
+        }
+        footer a, footer .contact-info {
+            color: white;
+            margin: 5px 10px;
+            text-decoration: none;
+            flex: 1;
+            text-align: center; /* 文字居中 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">株式会社千喜</div>
+        <div class="tagline">    選ぶ喜び、セレクトライフ</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">トップページ</a></li>
+                <li><a href="page2.html">    会社案内</a></li>
+                <li><a href="page3.html">    業務のご案内</a></li>
+                <li><a href="page4.html">    求人情報            </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="video-container">
+        <video src="kyoto.mp4" autoplay muted loop></video>
+        <div class="overlay"><h5> カブシキガイシャ   チハル</h5>株  式  会  社      千  喜</div>
+    </div>
+    <div class="content">
+        <section id="home">
+            <h3>カブシキガイシャ  チハル</h3>
+            <h1>    株  式  会  社   千  喜</h1>
+            <img src="101.jpg" alt="Noimg" style="display: block; margin: 0 auto;"> <!-- 图片居中 -->
+            <p>常に変化している国際社会の中で、社員一人一人の自分成長と企業の安定・発展を図り、<br><br>
+			新たな価値を創造し広く社会に貢献するグローバルな企業を目指しています。<br><br>
+       社員を信頼し、年齢に関係なくチャンスを与えます。必ずその努力が発揮できる環境が遠望にはあります。<br><br>
+		常にチャレンジ精神を持ってどんなことにも取り組んでもらいたいです。<br><br>
+        チャレンジ精神の旺盛な方、様々な経験を通じて人間力を高めたい方、千喜グループで、<br><br>
+		ぜひその力を思う存分に発揮してください。</p>
+        </section>
+    </div>
+    <section id="about" class="company-info">
+        <div class="text">
+           
+            <img src="104.png" alt="Noimg" style="display: block; margin: 0;"> <!-- 图片紧贴左边线 --><br>
+             <h2>社長からのご挨拶:</h2>
+			 <p>私たちは、若い力を活かし、常に革新と挑戦を続けるネットワーク企業です。<br><br>
+社員一人ひとりの成長を大切にし、自由な発想と強いチームワークで、お客様に最高のサービスを提供することを目指しています。<br><br>
+
+現代社会において、ネットワーク技術の発展は目覚ましく、私たちの生活やビジネスのあらゆる側面に影響を与えています。<br><br>
+株式会社千喜では、これらの技術を活用し、持続可能な未来を築くためのソリューションを提供してまいります。<br><br>
+今後とも、皆様のご支援とご愛顧を賜りますようお願い申し上げます。<br><br><br>
+                                                                                                      株式会社千喜<br>
+                                                                                                       代表取締役　鄒汶玲</p>
+        </div>
+    </section>
+    <footer>
+       <span class="contact-info">CHIHARUグループ              株式会社千喜             info@chiharu-group.com</span>
+    </footer>
+</body>
+</html>

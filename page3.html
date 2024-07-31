@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社千喜</title>
+     <style>
+             body, html {
+                 margin: 0;
+                 padding: 0;
+                 font-family: Arial, sans-serif;
+                 background-color: #f9f9f9;
+             }
+			 header {
+			     display: flex;
+			     justify-content: space-between;
+			     align-items: center;
+			     padding: 10px 20px;
+			     background-color: rgba(0, 0, 0, 0.5); /* 头部栏背景半透明 */
+			     position: fixed; /* 固定头部栏 */
+			     width: 100%;
+			     top: 0;
+			     left: 0;
+			     z-index: 1000;
+			 }
+			 header .logo {
+			     font-size: 24px; /* 设置大字体 */
+			     color: #fff;
+			     margin-right: 20px; /* 文字前面加空格 */
+			 }
+			 header .tagline {
+			     color: #fff;
+			 }
+			 nav ul {
+			     list-style: none;
+			     display: flex;
+			     margin: 0;
+			     padding: 0;
+			 }
+			 nav ul li {
+			     margin-left: 20px;
+			 }
+			 nav ul li a {
+			     text-decoration: none;
+			     color: #fff; /* 设置链接颜色为白色 */
+			 }
+			 nav {
+			     margin-left: auto; /* 将导航栏向左移动 */
+			 }
+			 .video-container {
+			     position: relative;
+			     width: 100%;
+			     height: 60vh;
+			     overflow: hidden;
+			 }
+			 .video-container video {
+			     width: 100%;
+			     height: 100%;
+			     object-fit: cover;
+			 }
+			 .video-container .overlay {
+			     position: absolute;
+			     top: 50%;
+			     left: 50%;
+			     transform: translate(-50%, -50%);
+			     color: #fff;
+			     font-size: 36px;
+			     font-weight: bold;
+			 }
+			 .content {
+			     background-color: #fff;
+			     padding: 1px;
+				 /* width: 1900px; */
+				 width: 100%;
+			     text-align: center; /* 使文字居中 */
+			 }
+			  .content img {
+				 	 flex: 1;
+				      /* width: 1900px; */
+					  width: 100%;
+					  max-width: 100%;
+				      height: auto;
+				  }
+			 .company-info {
+			     display: flex;
+			     justify-content: space-between;
+			     align-items: center;
+			     padding: 1px;
+			 }
+			 .company-info img {
+			     flex: 1;
+			     /* width: 1900px; */
+				 width: 100%;
+				 max-width: 100%;
+			     height: auto;
+			 }
+			 .company-info .text {
+			     flex: 1;
+			     text-align: center;
+			     padding: 1px;
+			 }
+			 .content-info {
+			     background-color: #fff;
+			     padding: 1px;
+			     text-align: center; /* 使文字居中 */
+			 }
+			  .content-info img {
+				flex: 1;
+				    /* width: 1900px; */
+					width: 100%;
+					max-width: 100%;
+				    height: auto;
+				}  
+            .company-yofo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1px;
+            }
+			.company-yofo img {
+			    flex: 1;
+			    /* width: 1900px; */
+				width: 100%;
+				max-width: 100%;
+			    height: auto;
+			}
+            .company-yofo .text {
+                flex: 1;
+                text-align: center;
+                padding: 1px;
+            }
+             h1 {
+                 text-align: center;
+                 margin-bottom: 20px;
+             }
+             
+			 footer {
+			     background-color: rgba(0, 0, 0, 0.5);
+			     color: white;
+			     text-align: left;
+			     padding: 10px;
+			     display: flex;
+			     justify-content: space-around; /* 平均分布 */
+			     flex-wrap: nowrap; /* 禁止换行 */
+			 }
+			 footer a, footer .contact-info, .contact-yofo {
+			     color: white;
+			     margin: 5px 10px;
+			     text-decoration: none;
+			     flex: 1;
+			     text-align: center; /* 文字居中 */
+			 }
+         </style>
+</head>
+<body>
+    <header>
+        <div class="logo">株式会社千喜</div>
+        <div class="tagline">    選ぶ喜び、セレクトライフ</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">トップページ</a></li>
+                <li><a href="page2.html">    会社案内</a></li>
+                <li><a href="page3.html">    業務のご案内</a></li>
+                <li><a href="page4.html">    求人情報            </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="video-container">
+        <video src="kyoto.mp4" autoplay muted loop></video>
+        <div class="overlay"> 業務のご案内</div>
+    </div>
+    <div class="content">
+        <section id="home">
+            <h1> 小売・卸売事業</h1>
+<img src="001.jpg" alt="Noimg">
+<br><br>
+            <div class="line">【調理・生活家電キッチン家電】　　生活家電　　健康・美容家電　　照明器具・天井照明　　季節家電　など</div>
+            <div class="line">【カー用品】　カーナビ・その他車載器　　空気入れ機器　など</div>
+            <div class="line">【DIY・工具】　一般工具　　電動工具　など</div>
+            <div class="line">【生活雑貨】　調理器具・食器　　旅行用品　　家具　　住宅設備　など</div>
+            <p class="placeholder">弊社では、国内・海外の様々な雑貨用品から、自ら企画・設計・デザインを手がけたオリジナルアイテムを展開し、販売しております。<br><br></p>
+        </section>
+    </div>
+    <section id="about" class="company-info">
+        <div class="text">
+            <h2> 輸出入・貿易事業</h2>
+<img src="002.jpg" alt="Noimg">
+            <p>
+物流会社の商社部門として、海外企業との輸出・輸入及び生産者様に代わって輸出代行を行っています。<br><br>
+弊社は、依頼者様の代わりに弊社の海外ネットワークにて試売を行ったり、輸出業務の引き受け、必要書類の代行申請など、柔軟に対応が可能でございます。<br><br>
+海外への輸出に興味がある方、海外からコンタクトがあったが手順がわからずお困りの方、<br><br>現地のお客様とのやりとりに不安のある方など、問い合わせフォームからお気軽にご相談下さい。<br><br>
+ </p>
+        </div>
+    </section>
+	<div class="content-info">
+	        <section id="home">
+	            <h1>宿泊施設の経営事業</h1>
+	<img src="003.jpg" alt="Noimg">
+	            <p>業界のトレンドと豊富な経験を活かし、以下のサービスを通じて宿泊施設の運営をサポートします：<br><br>
+宿泊施設の市場動向や競合状況を詳細に分析し、最適な戦略を策定します。<br><br>
+運営戦略の立案，効率的な運営方法やサービス改善策を提案し、収益性の向上を図ります。<br><br>
+財務管理と予算策定，収支のバランスを取り、予算の策定や財務分析を行います。<br><br>
+マーケティングとプロモーション，効果的なマーケティング戦略を立案し、集客とブランドの強化を支援します。<br><br>
+サービス品質の向上，顧客満足度を高めるためのサービス向上策を提案し、スタッフのトレーニングを実施します。<br><br>
+
+運営の最適化と収益性の向上を目指す宿泊施設様は、ぜひ弊社のコンサルティングサービスをご活用ください。<br><br></p>
+	        </section>
+	    </div>
+	<section id="about" class="company-yofo">
+	        <div class="text">
+	            <h2> 国際コンサルティングサービス</h2>
+	<img src="004.jpg" alt="Noimg">
+	            <p>当社のクロスボーダーコンサルティングサービスは、海外企業が日本市場に進出する際のあらゆるニーズに対応する包括的な支援を提供します。<br><br>
+				具体的には市場調査：日本市場の需要、競合状況、消費者行動、規制政策を詳細に分析し、企業に具体的な市場情報を提供します。<br><br>
+				法規制コンサルティング：企業が日本の法律や規制を理解し、遵守するためのサポートを行います。これには、会社設立、税務、労働法、知的財産保護などが含まれます。<br><br>
+ビジネス戦略の策定：企業のニーズに合わせた国際展開戦略を構築し、実行可能なプランを提供します。
+人材採用と育成：国際ビジネスに対応できる人材の採用・育成をサポートします。<br><br>
+
+	 </p>
+	        </div>
+	    </section>
+		<footer>
+    <span class="contact-info">CHIHARUグループ              株式会社千喜             info@chiharu-group.com</span>
+        </footer>
+    </body>
+    </html>
