@@ -159,20 +159,53 @@
                     font-size: 14px;
                 }
             }
+            .content {
+                background-color: #fff;
+                padding: 20px;
+                text-align: center;
+            }
+            .content h1 {
+                margin-bottom: 20px;
+            }
+            .content img {
+                width: 50%;
+                height: auto;
+                margin: 0 auto 20px;
+            }
+            .business-categories {
+                max-width: 800px; /* Adjust the max-width as needed */
+                margin: 0 auto;
+            }
+            .business-categories .line {
+                margin-bottom: 10px;
+                text-align: left;
+            }
+            .business-categories .line strong {
+                display: inline-block;
+                width: 150px;
+                text-align: left;
+                margin-right: 10px;
+            }
+            .description {
+                max-width: 800px; /* Adjust the max-width as needed */
+                margin: 20px auto;
+                text-align: left;
+            }
+
 
          </style>
 </head>
 <body>
     <header>
         <div class="logo">株式会社千喜</div>
-        <div class="tagline">    選ぶ喜び、セレクトライフ</div>
+        <div class="tagline">選ぶ喜び、セレクトライフ</div>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">≡</button>
         <nav>
             <ul id="primary-navigation" data-visible="false">
-                <li><a href="index.html">トップページ</a></li>
-                <li><a href="page2.html">    会社案内</a></li>
-                <li><a href="page3.html">    業務のご案内</a></li>
-                <li><a href="page4.html">    求人情報            </a></li>
+                <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;トップページ</a></li>
+                <li><a href="page2.html">&nbsp;&nbsp;&nbsp;&nbsp;会社案内</a></li>
+                <li><a href="page3.html">&nbsp;&nbsp;&nbsp;&nbsp;業務のご案内</a></li>
+                <li><a href="page4.html">&nbsp;&nbsp;&nbsp;&nbsp;求人情報&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
             </ul>
         </nav>
     </header>
@@ -182,14 +215,29 @@
     </div>
     <div class="content">
         <section id="home">
-            <h1> 小売・卸売事業</h1>
-<img src="/chiharu0321.github.io/assets/001-CkfPDJNU.jpg" alt="Noimg">
-            
-            <div class="line"><br>【調理・生活家電キッチン家電】　　生活家電　　健康・美容家電　　照明器具・天井照明　　季節家電　など</div>
-            <div class="line">【カー用品】　カーナビ・その他車載器　　空気入れ機器　など</div>
-            <div class="line">【DIY・工具】　一般工具　　電動工具　など</div>
-            <div class="line">【生活雑貨】　調理器具・食器　　旅行用品　　家具　　住宅設備　など</div>
-            <p class="placeholder">弊社では、国内・海外の様々な雑貨用品から、自ら企画・設計・デザインを手がけたオリジナルアイテムを展開し、販売しております。<br><br></p>
+            <h1>小売・卸売事業</h1>
+            <img src="/chiharu0321.github.io/assets/001-CkfPDJNU.jpg" alt="Noimg">
+            <div class="business-categories">
+                <div class="line">
+                    <strong>【調理・生活家電】</strong> 
+                    <span>生活家電、健康・美容家電、照明器具・天井照明、季節家電 など</span>
+                </div>
+                <div class="line">
+                    <strong>【カー用品】</strong> 
+                    <span>カーナビ・その他車載器、空気入れ機器 など</span>
+                </div>
+                <div class="line">
+                    <strong>【DIY・工具】</strong> 
+                    <span>一般工具、電動工具 など</span>
+                </div>
+                <div class="line">
+                    <strong>【生活雑貨】</strong> 
+                    <span>調理器具・食器、旅行用品、家具、住宅設備 など</span>
+                </div>
+            </div>
+            <p class="description">
+                弊社では、国内・海外の様々な雑貨用品から、自ら企画・設計・デザインを手がけたオリジナルアイテムを展開し、販売しております。
+            </p>
         </section>
     </div>
     <section id="about" class="company-info">
