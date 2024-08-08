@@ -5,159 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式会社千喜</title>
      <style>
-             body, html {
-                 margin: 0;
-                 padding: 0;
-                 font-family: Arial, sans-serif;
-                 background-color: #f9f9f9;
-             }
-			 header {
-			     display: flex;
-			     justify-content: space-between;
-			     align-items: center;
-			     padding: 10px 20px;
-			     background-color: rgba(0, 0, 0, 0.5); /* 头部栏背景半透明 */
-			     position: fixed; /* 固定头部栏 */
-			     width: 100%;
-			     top: 0;
-			     left: 0;
-			     z-index: 1000;
-			 }
-			 header .logo {
-			     font-size: 24px; /* 设置大字体 */
-			     color: #fff;
-			     margin-right: 20px; /* 文字前面加空格 */
-			 }
-			 header .tagline {
-			     color: #fff;
-			 }
-			 nav ul {
-			     list-style: none;
-			     display: flex;
-			     margin: 0;
-			     padding: 0;
-			 }
-			 nav ul li {
-			     margin-left: 20px;
-			 }
-			 nav ul li a {
-			     text-decoration: none;
-			     color: #fff; /* 设置链接颜色为白色 */
-			 }
-			 nav {
-			     margin-left: auto; /* 将导航栏向左移动 */
-			 }
-			 .video-container {
-			     position: relative;
-			     width: 100%;
-			     height: 60vh;
-			     overflow: hidden;
-			 }
-			 .video-container video {
-			     width: 100%;
-			     height: 100%;
-			     object-fit: cover;
-			 }
-			 .video-container .overlay {
-			     position: absolute;
-			     top: 50%;
-			     left: 50%;
-			     transform: translate(-50%, -50%);
-			     color: #fff;
-			     font-size: 36px;
-			     font-weight: bold;
-			 }
-			 .content {
-			     background-color: #fff;
-			     padding: 1px;
-				 /* width: 1900px; */
-				 width: 100%;
-			     text-align: center; /* 使文字居中 */
-			 }
-			  .content img {
-				 	 flex: 1;
-				      /* width: 1900px; */
-					  width: 100%;
-					  max-width: 100%;
-				      height: auto;
-				  }
-			 .company-info {
-			     display: flex;
-			     justify-content: space-between;
-			     align-items: center;
-			     padding: 1px;
-			 }
-			 .company-info img {
-			     flex: 1;
-			     /* width: 1900px; */
-				 width: 100%;
-				 max-width: 100%;
-			     height: auto;
-			 }
-			 .company-info .text {
-			     flex: 1;
-			     text-align: center;
-			     padding: 1px;
-			 }
-			 .content-info {
-			     background-color: #fff;
-			     padding: 1px;
-			     text-align: center; /* 使文字居中 */
-			 }
-			  .content-info img {
-				flex: 1;
-				    /* width: 1900px; */
-					width: 100%;
-					max-width: 100%;
-				    height: auto;
-				}  
-            .company-yofo {
+            body, html {
+                margin: 0;
+                padding: 0;
+                font-family: "游ゴシック", "Yu Gothic", sans-serif;
+            }
+            header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 10px 20px;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+            }
+            header .logo {
+                font-size: 18px;
+                color: #fff;
+                margin-right: 10px;
+            }
+            header .tagline {
+                font-size: 12px;
+                color: #fff;
+                margin-right: 15px;
+            }
+            nav ul {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+            nav ul li {
+                margin-left: 15px;
+            }
+            nav ul li:last-child {
+                margin-left: 10px;
+            }
+            nav ul li a {
+                text-decoration: none;
+                color: #fff;
+            }
+            nav {
+                margin-left: auto;
+            }
+            .video-container {
+                position: relative;
+                width: 100%;
+                height: 60vh;
+                overflow: hidden;
+            }
+            .video-container video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .video-container .overlay {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .content {
+                background-color: #fff;
+                padding: 1px;
+                width: 100%;
+                text-align: center;
+            }
+            .content img {
+                width: 100%;
+                height: auto;
+            }
+            .company-info, .company-yofo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 padding: 1px;
             }
-			.company-yofo img {
-			    flex: 1;
-			    /* width: 1900px; */
-				width: 100%;
-				max-width: 100%;
-			    height: auto;
-			}
-            .company-yofo .text {
-                flex: 1;
+            .company-info img, .company-yofo img {
+                width: 100%;
+                height: auto;
+            }
+            .company-info .text, .company-yofo .text {
                 text-align: center;
                 padding: 1px;
             }
-             h1 {
-                 text-align: center;
-                 margin-bottom: 20px;
-             }
-             
-			 footer {
-			     background-color: rgba(0, 0, 0, 0.5);
-			     color: white;
-			     text-align: left;
-			     padding: 10px;
-			     display: flex;
-			     justify-content: space-around; /* 平均分布 */
-			     flex-wrap: nowrap; /* 禁止换行 */
-			 }
-			 footer a, footer .contact-info, .contact-yofo {
-			     color: white;
-			     margin: 5px 10px;
-			     text-decoration: none;
-			     flex: 1;
-			     text-align: center; /* 文字居中 */
-			 }
+            .content-info {
+                background-color: #fff;
+                padding: 1px;
+                text-align: center;
+            }
+            .content-info img {
+                width: 100%;
+                height: auto;
+            }
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            footer {
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                text-align: left;
+                padding: 10px;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: nowrap;
+            }
+            footer a, footer .contact-info, .contact-yofo {
+                color: white;
+                margin: 5px 10px;
+                text-decoration: none;
+                flex: 1;
+                text-align: center;
+            }
+            .mobile-nav-toggle {
+                display: none;
+            }
+            @media only screen and (max-width: 600px) {
+                .mobile-nav-toggle {
+                    display: block;
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 24px;
+                }
+                #primary-navigation[data-visible="false"] {
+                    display: none;
+                }
+                #primary-navigation[data-visible="true"] {
+                    display: block;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    position: absolute;
+                    top: 60px;
+                    right: 20px;
+                    width: 200px;
+                    text-align: left;
+                }
+                #primary-navigation li {
+                    margin: 10px 0;
+                }
+                #primary-navigation li a {
+                    color: white;
+                    text-decoration: none;
+                }
+                .content, .company-info .text {
+                    font-size: 14px;
+                }
+            }
+
          </style>
 </head>
 <body>
     <header>
         <div class="logo">株式会社千喜</div>
         <div class="tagline">    選ぶ喜び、セレクトライフ</div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">≡</button>
         <nav>
-            <ul>
+            <ul id="primary-navigation" data-visible="false">
                 <li><a href="index.html">トップページ</a></li>
                 <li><a href="page2.html">    会社案内</a></li>
                 <li><a href="page3.html">    業務のご案内</a></li>
@@ -173,8 +184,8 @@
         <section id="home">
             <h1> 小売・卸売事業</h1>
 <img src="001.jpg" alt="Noimg">
-<br><br>
-            <div class="line">【調理・生活家電キッチン家電】　　生活家電　　健康・美容家電　　照明器具・天井照明　　季節家電　など</div>
+            
+            <div class="line"><br>【調理・生活家電キッチン家電】　　生活家電　　健康・美容家電　　照明器具・天井照明　　季節家電　など</div>
             <div class="line">【カー用品】　カーナビ・その他車載器　　空気入れ機器　など</div>
             <div class="line">【DIY・工具】　一般工具　　電動工具　など</div>
             <div class="line">【生活雑貨】　調理器具・食器　　旅行用品　　家具　　住宅設備　など</div>
@@ -222,5 +233,23 @@
 		<footer>
     <span class="contact-info">CHIHARUグループ              株式会社千喜             info@chiharu-group.com</span>
         </footer>
+		<script>
+		    document.addEventListener('DOMContentLoaded', function() {
+		        const navToggle = document.querySelector('.mobile-nav-toggle');
+		        const primaryNav = document.querySelector('#primary-navigation');
+		
+		        navToggle.addEventListener('click', function() {
+		            const visibility = primaryNav.getAttribute('data-visible');
+		            
+		            if (visibility === "false") {
+		                primaryNav.setAttribute('data-visible', true);
+		                navToggle.setAttribute('aria-expanded', true);
+		            } else if (visibility === "true") {
+		                primaryNav.setAttribute('data-visible', false);
+		                navToggle.setAttribute('aria-expanded', false);
+		            }
+		        });
+		    });
+		</script>
     </body>
     </html>
