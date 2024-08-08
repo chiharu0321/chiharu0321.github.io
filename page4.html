@@ -8,65 +8,70 @@
         body, html {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: "游ゴシック", "Yu Gothic", sans-serif;
         }
-		header {
-		     display: flex;
-		     justify-content: space-between;
-		     align-items: center;
-		     padding: 10px 20px;
-		     background-color: rgba(0, 0, 0, 0.5); /* 头部栏背景半透明 */
-		     position: fixed; /* 固定头部栏 */
-		     width: 100%;
-		     top: 0;
-		     left: 0;
-		     z-index: 1000;
-		 }
-		 header .logo {
-		     font-size: 24px; /* 设置大字体 */
-		     color: #fff;
-		     margin-right: 20px; /* 文字前面加空格 */
-		 }
-		 header .tagline {
-		     color: #fff;
-		 }
-		 nav ul {
-		     list-style: none;
-		     display: flex;
-		     margin: 0;
-		     padding: 0;
-		 }
-		 nav ul li {
-		     margin-left: 20px;
-		 }
-		 nav ul li a {
-		     text-decoration: none;
-		     color: #fff; /* 设置链接颜色为白色 */
-		 }
-		 nav {
-		     margin-left: auto; /* 将导航栏向左移动 */
-		 }
-		 .video-container {
-		     position: relative;
-		     width: 100%;
-		     height: 60vh;
-		     overflow: hidden;
-		 }
-		 .video-container video {
-		     width: 100%;
-		     height: 100%;
-		     object-fit: cover;
-		 }
-		 .video-container .overlay {
-		     position: absolute;
-		     top: 50%;
-		     left: 50%;
-		     transform: translate(-50%, -50%);
-		     color: #fff;
-		     font-size: 36px;
-		     font-weight: bold;
-		 }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 18px; /* 调整为较小的字体 */
+            color: #fff;
+            margin-right: 10px;
+        }
+        header .tagline {
+            font-size: 12px; /* 调整为较小的字体 */
+            color: #fff;
+        	margin-right: 15px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 15px; /* 将导航项之间的间距缩小 */
+        }
+        nav ul li:last-child {
+            margin-left: 10px; /* 将最后一个导航项（求人情報）向左移动 */
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        nav {
+            margin-left: auto;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .video-container .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
 		 .content {
 		     background-color: #fff;
 		     padding: 20px;
@@ -171,14 +176,53 @@
 		    flex: 1;
 		    text-align: center; /* 文字居中 */
 		}
+		/* Add this within your @media query for mobile screens */
+		.mobile-nav-toggle {
+		    display: none;
+		}
+		@media only screen and (max-width: 600px) {
+		    .mobile-nav-toggle {
+		        display: block;
+		        background: none;
+		        border: none;
+		        color: white;
+		        font-size: 24px;
+		    }
+		    #primary-navigation[data-visible="false"] {
+		        display: none;
+		    }
+		    #primary-navigation[data-visible="true"] {
+		        display: block;
+		        background-color: rgba(0, 0, 0, 0.8);
+		        position: absolute;
+		        top: 60px;
+		        right: 20px;
+		        width: 200px;
+		        text-align: left;
+		    }
+		    #primary-navigation li {
+		        margin: 10px 0;
+		    }
+		    #primary-navigation li a {
+		        color: white;
+		        text-decoration: none;
+		    }
+		    .content {
+		        font-size: 14px; /* 缩小content部分的字体 */
+		    }
+		    .company-info .text {
+		        font-size: 14px; /* 缩小company-info部分的字体 */
+		    }
+		}
     </style>
 </head>
 <body>
 	<header>
 	    <div class="logo">株式会社千喜</div>
 	    <div class="tagline">&nbsp;&nbsp;&nbsp;&nbsp;選ぶ喜び、セレクトライフ</div>
-	    <nav>
-	        <ul>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">≡</button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false">
 	            <li><a href="index.html">トップページ</a></li>
 	            <li><a href="page2.html">&nbsp;&nbsp;&nbsp;&nbsp;会社案内</a></li>
 	            <li><a href="page3.html">&nbsp;&nbsp;&nbsp;&nbsp;業務のご案内</a></li>
@@ -202,7 +246,7 @@
         </div>
         <div class="section">
             <h2>🍬[この仕事のやりがい]</h2>
-            <p>LIVE配信を手伝ってくれる方を募集しております。 20代～30代～雰囲気が良い職場。<br><br>職場服装、髪型自由で楽しみながらお仕事ができます。</p>
+            <p>LIVE配信を手伝ってくれる方を募集しております。 雰囲気が良い職場。<br><br>職場服装、髪型自由で楽しみながらお仕事ができます。</p>
         </div>
         <div class="section">
             <h2>🍬[対象となる方]</h2>
@@ -231,8 +275,7 @@
         </div>
         <div class="section">
             <h2>🍬求める経験</h2>
-            <p>既卒・第二新卒歓迎 副業・WワークOK 未経験OK 学生OK 学歴不問 ・Instagram・TikTokなどLIVE配信をした事がある方、
-			<br>SNSを日頃から使用している方活躍中！ ・自身の撮影投稿が可能な方活躍中！ ・DIYが好きな活躍中！</p>
+            <p>既卒・第二新卒歓迎 副業・WワークOK 未経験OK 学生OK 学歴不問 ・Instagram・TikTokなどLIVE配信をした事がある方、SNSを日頃から使用している方活躍中！ ・自身の撮影投稿が可能な方活躍中！ ・DIYが好きな活躍中！</p>
         </div>
         <div class="section">
             <p>興味のある方は、履歴書をメールで <a href="mailto:info@chiharu-group.com" class="button">info@chiharu-group.com</a> に送信するか、会社のポスト📮に投函してください。</p>
@@ -241,5 +284,23 @@
 	<footer>
 	   <span class="contact-info">CHIHARUグループ              株式会社千喜             info@chiharu-group.com</span>
 	</footer>
+	<script>
+	    document.addEventListener('DOMContentLoaded', function() {
+	        const navToggle = document.querySelector('.mobile-nav-toggle');
+	        const primaryNav = document.querySelector('#primary-navigation');
+	
+	        navToggle.addEventListener('click', function() {
+	            const visibility = primaryNav.getAttribute('data-visible');
+	            
+	            if (visibility === "false") {
+	                primaryNav.setAttribute('data-visible', true);
+	                navToggle.setAttribute('aria-expanded', true);
+	            } else if (visibility === "true") {
+	                primaryNav.setAttribute('data-visible', false);
+	                navToggle.setAttribute('aria-expanded', false);
+	            }
+	        });
+	    });
+	</script>
 </body>
 </html>

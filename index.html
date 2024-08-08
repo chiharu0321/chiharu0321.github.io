@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式会社千喜</title>
+    <link rel="icon" href="/chiharu0321.github.io/assets/favicon-CXsL9nDI.png" type="image/png">
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            font-family: "游ゴシック", "Yu Gothic", sans-serif; /* 修改字体 */
+            font-family: "游ゴシック", "Yu Gothic", sans-serif;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* 头部栏背景半透明 */
-            position: fixed; /* 固定头部栏 */
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
         }
         header .logo {
-            font-size: 36px; /* 设置大字体 */
+            font-size: 18px; /* 调整为较小的字体 */
             color: #fff;
-            margin-right: 20px; /* 文字前面加空格 */
+            margin-right: 10px;
         }
         header .tagline {
+            font-size: 12px; /* 调整为较小的字体 */
             color: #fff;
+            margin-right: 15px;
         }
         nav ul {
             list-style: none;
@@ -37,14 +40,17 @@
             padding: 0;
         }
         nav ul li {
-            margin-left: 20px;
+            margin-left: 15px; /* 将导航项之间的间距缩小 */
+        }
+        nav ul li:last-child {
+            margin-left: 10px; /* 将最后一个导航项（求人情報）向左移动 */
         }
         nav ul li a {
             text-decoration: none;
-            color: #fff; /* 设置链接颜色为白色 */
+            color: #fff;
         }
         nav {
-            margin-left: auto; /* 将导航栏向左移动 */
+            margin-left: auto;
         }
         .video-container {
             position: relative;
@@ -63,123 +69,169 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: #fff;
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
+            text-align: center;
         }
-		.video-container .overlay h5 {
-			margin: 0; /* 调整上下间距 */
-			}
         .content {
             background-color: #fff;
             padding: 20px;
-            text-align: center; /* 使文字靠左 */
-            padding-left: 1px; /* 留一些空隙 */
+            text-align: center;
         }
         .content h3, .content h1, .content img {
-            text-align: center; /* 居中对齐 */
+            text-align: center;
         }
-	    .content h3, .content h1 {
-		            margin: 0; /* 调整上下间距 */
-		        }
-		.content img {
-			 flex: 1;
-			 width: auto; /* 确保图片宽度 */
-			 height: auto;
-			 text-align: center; /* 图片靠左 */
-			 margin: 0; /* 确保没有空隙 */
-			 padding: 0; /* 确保没有填充 */
-			 display: block; /* 确保图片是块级元素 */
-			}
-        .company-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* 确保图片和文字顶部对齐 */
-    padding: 1px;
-         }
-		 .company-info h2 {
-			 margin: 0; /* 调整上下间距 */
-			 }
-        .company-info .text {
-    flex: 1;
-    text-align: center; /* 使文字靠左 */
-    padding-left: 1px; /* 留一些空隙 */
-         }
-        .company-info img {
-            flex: 1;
-            width: 100%; /* 确保图片宽度 */
-            max-width: 100%; /* 确保图片不超过屏幕宽度 */
+        .content h3, .content h1 {
+            margin: 0;
+        }
+        .content img {
+            width: 50%;
             height: auto;
-            text-align: center; /* 图片靠左 */
-            margin: 0; /* 确保没有空隙 */
-            padding: 0; /* 确保没有填充 */
-            display: block; /* 确保图片是块级元素 */
+            margin: 0 auto;
         }
-
+        .company-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1px;
+        }
+        .company-info h2 {
+            margin: 0;
+        }
+        .company-info .text {
+            text-align: center;
+            padding: 10px;
+        }
+        .company-info img {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
         footer {
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
-            text-align: left;
+            text-align: center;
             padding: 10px;
             display: flex;
-            justify-content: space-around; /* 平均分布 */
-            flex-wrap: nowrap; /* 禁止换行 */
+            justify-content: center;
+            flex-wrap: wrap;
         }
         footer a, footer .contact-info {
             color: white;
             margin: 5px 10px;
             text-decoration: none;
             flex: 1;
-            text-align: center; /* 文字居中 */
+            text-align: center;
+        }
+        /* Add this within your @media query for mobile screens */
+        .mobile-nav-toggle {
+            display: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .mobile-nav-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 24px;
+            }
+            #primary-navigation[data-visible="false"] {
+                display: none;
+            }
+            #primary-navigation[data-visible="true"] {
+                display: block;
+                background-color: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                width: 200px;
+                text-align: left;
+            }
+            #primary-navigation li {
+                margin: 10px 0;
+            }
+            #primary-navigation li a {
+                color: white;
+                text-decoration: none;
+            }
+            .content {
+                font-size: 14px; /* 缩小content部分的字体 */
+            }
+			.content img {
+			    width: 50%;
+			    height: auto;
+			    margin: 0 auto;
+			}
+            .company-info .text {
+                font-size: 14px; /* 缩小company-info部分的字体 */
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">株式会社千喜</div>
-        <div class="tagline">    選ぶ喜び、セレクトライフ</div>
+        <div class="tagline">選ぶ喜び、セレクトライフ</div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">≡</button>
         <nav>
-            <ul>
+            <ul id="primary-navigation" data-visible="false">
                 <li><a href="index.html">トップページ</a></li>
-                <li><a href="page2.html">    会社案内</a></li>
-                <li><a href="page3.html">    業務のご案内</a></li>
-                <li><a href="page4.html">    求人情報            </a></li>
+                <li><a href="page2.html">&nbsp;&nbsp;&nbsp;&nbsp;会社案内</a></li>
+                <li><a href="page3.html">&nbsp;&nbsp;&nbsp;&nbsp;業務のご案内</a></li>
+                <li><a href="page4.html">&nbsp;&nbsp;&nbsp;&nbsp;求人情報&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
             </ul>
         </nav>
     </header>
     <div class="video-container">
         <video src="/chiharu0321.github.io/assets/kyoto-ZyoqsGs-.mp4" autoplay muted loop></video>
-        <div class="overlay"><h5> カブシキガイシャ   チハル</h5>株  式  会  社      千  喜</div>
+        <div class="overlay"><h5>カブシキガイシャ チハル</h5>株 式 会 社 千 喜</div>
     </div>
     <div class="content">
         <section id="home">
-            <h3>カブシキガイシャ  チハル</h3>
-            <h1>    株  式  会  社   千  喜</h1>
-            <img src="/chiharu0321.github.io/assets/101-Cp0zyCtn.jpg" alt="Noimg" style="display: block; margin: 0 auto;"> <!-- 图片居中 -->
-            <p>常に変化している国際社会の中で、社員一人一人の自分成長と企業の安定・発展を図り、<br><br>
-			新たな価値を創造し広く社会に貢献するグローバルな企業を目指しています。<br><br>
-       社員を信頼し、年齢に関係なくチャンスを与えます。必ずその努力が発揮できる環境が遠望にはあります。<br><br>
-		常にチャレンジ精神を持ってどんなことにも取り組んでもらいたいです。<br><br>
-        チャレンジ精神の旺盛な方、様々な経験を通じて人間力を高めたい方、千喜グループで、<br><br>
-		ぜひその力を思う存分に発揮してください。</p>
+            <h3>カブシキガイシャ チハル</h3>
+            <h1>株 式 会 社 千 喜</h1>
+            <img src="/chiharu0321.github.io/assets/101-Cp0zyCtn.jpg" alt="Noimg">
+            <p>常に変化している国際社会の中で，社員一人一人の自分成長と企業の安定・発展を図り，<br><br>
+            新たな価値を創造し広く社会に貢献するグローバルな企業を目指しています。<br><br>
+            社員を信頼し，年齢に関係なくチャンスを与えます。必ずその努力が发揮できる环境が远望にはあります。<br><br>
+            常にチャレンジ精神を持ってどんなことにも取り组んでもらいたいです。<br><br>
+            チャレンジ精神の旺盛な方，様々な经验を通じて人间力を高めたい方，千喜グループで，<br><br>
+            ぜひその力を思う存分に发揮してください。</p>
         </section>
     </div>
     <section id="about" class="company-info">
         <div class="text">
-           
-            <img src="/chiharu0321.github.io/assets/104-D-cz6yXV.png" alt="Noimg" style="display: block; margin: 0;"> <!-- 图片紧贴左边线 --><br>
-             <h2>社長からのご挨拶:</h2>
-			 <p>私たちは、若い力を活かし、常に革新と挑戦を続けるネットワーク企業です。<br><br>
-社員一人ひとりの成長を大切にし、自由な発想と強いチームワークで、お客様に最高のサービスを提供することを目指しています。<br><br>
-
-現代社会において、ネットワーク技術の発展は目覚ましく、私たちの生活やビジネスのあらゆる側面に影響を与えています。<br><br>
-株式会社千喜では、これらの技術を活用し、持続可能な未来を築くためのソリューションを提供してまいります。<br><br>
-今後とも、皆様のご支援とご愛顧を賜りますようお願い申し上げます。<br><br><br>
-                                                                                                      株式会社千喜<br>
-                                                                                                       代表取締役　鄒汶玲</p>
+            <img src="/chiharu0321.github.io/assets/104-D-cz6yXV.png" alt="Noimg">
+            <h2>社長からのご挨拶:</h2>
+            <p>私たちは，若い力を活かし，常に革新と挑戦を続けるネットワーク企業です。<br><br>
+            社员一人ひとりの成长を大切にし，自由な发想と强いチームワークで，お客様に最高の服务を提供することを目指しています。<br><br>
+            現代社会において，ネットワーク技術の発展は目覚ましく，私たちの生活やビジネスのあらゆる侧面に影响を与えています。<br><br>
+            株式会社千喜では，これらの技術を活用し，持続可能な未来を築くためのソリューションを提供してまいります。<br><br>
+            今後とも，皆様のご支援とご爱顧を賜りますようお願い申し上げます。<br><br><br>
+                                                                                                                                                            株式会社千喜<br>
+                                                                                                                                                                     代表取締役 鄒汶玲</p>
         </div>
     </section>
     <footer>
-       <span class="contact-info">CHIHARUグループ              株式会社千喜             info@chiharu-group.com</span>
+        <span class="contact-info">CHIHARUグループ 株式会社千喜 info@chiharu-group.com</span>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.mobile-nav-toggle');
+            const primaryNav = document.querySelector('#primary-navigation');
+
+            navToggle.addEventListener('click', function() {
+                const visibility = primaryNav.getAttribute('data-visible');
+                
+                if (visibility === "false") {
+                    primaryNav.setAttribute('data-visible', true);
+                    navToggle.setAttribute('aria-expanded', true);
+                } else if (visibility === "true") {
+                    primaryNav.setAttribute('data-visible', false);
+                    navToggle.setAttribute('aria-expanded', false);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
