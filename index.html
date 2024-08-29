@@ -5,178 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式会社千喜</title>
     <link rel="icon" href="/chiharu0321.github.io/assets/favicon-0JjRbOWR.png" type="image/png">
-    <link rel="shortcut icon" href="/chiharu0321.github.io/assets/favicon-yHGd72XI.ico" type="image/x-icon">
     <style>
-        body, html {
-    margin: 0;
-    padding: 0;
-    font-family: "游ゴシック", "Yu Gothic", sans-serif;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-header .logo {
-    font-size: 18px; /* 调整为较小的字体 */
-    color: #fff;
-    margin-right: 10px;
-}
-header .tagline {
-    font-size: 12px; /* 调整为较小的字体 */
-    color: #fff;
-    margin-right: 15px;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    margin-left: 15px; /* 将导航项之间的间距缩小 */
-}
-nav ul li:last-child {
-    margin-left: 10px; /* 将最后一个导航项（求人情報）向左移动 */
-}
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-nav {
-    margin-left: auto;
-}
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-.video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.overlay {
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    animation: drop 2s forwards;
-    z-index: 2; /* Add this */
-}
-@keyframes drop {
-    to {
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-.content {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative; /* Add this */
-    z-index: 1; /* Add this */
-}
-.content h3, .content h1, .content img {
-    text-align: center;
-}
-.content h3, .content h1 {
-    margin: 0;
-}
-.content img {
-    width: 50%;
-    height: auto;
-    margin: 0 auto;
-}
-.company-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1px;
-}
-.company-info h2 {
-    margin: 0;
-}
-.company-info .text {
-    text-align: center;
-    padding: 10px;
-}
-.company-info img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-footer a, footer .contact-info {
-    color: white;
-    margin: 5px 10px;
-    text-decoration: none;
-    flex: 1;
-    text-align: center;
-}
-/* Add this within your @media query for mobile screens */
-.mobile-nav-toggle {
-    display: none;
-}
-@media only screen and (max-width: 600px) {
-    .mobile-nav-toggle {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-    }
-    #primary-navigation[data-visible="false"] {
-        display: none;
-    }
-    #primary-navigation[data-visible="true"] {
-        display: block;
-        background-color: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
-        text-align: left;
-    }
-    #primary-navigation li {
-        margin: 10px 0;
-    }
-    #primary-navigation li a {
-        color: white;
-        text-decoration: none;
-    }
-    .content {
-        font-size: 14px; /* 缩小content部分的字体 */
-    }
-    .content img {
-        width: 50%;
-        height: auto;
-        margin: 0 auto;
-    }
-    .company-info .text {
-        font-size: 14px; /* 缩小company-info部分的字体 */
-    }
-}
+       body, html {
+           margin: 0;
+           padding: 0;
+           font-family: "游ゴシック", "Yu Gothic", sans-serif;
+       }
+       header {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           padding: 10px 20px;
+           background-color: rgba(0, 0, 0, 0.5);
+           position: fixed;
+           width: 100%;
+           top: 0;
+           left: 0;
+           z-index: 1000;
+       }
+       header .logo {
+           font-size: 18px; /* 调整为较小的字体 */
+           color: #fff;
+           margin-right: 10px;
+       }
+       header .tagline {
+           font-size: 12px; /* 调整为较小的字体 */
+           color: #fff;
+           margin-right: 15px;
+       }
+       nav ul {
+           list-style: none;
+           display: flex;
+           margin: 0;
+           padding: 0;
+       }
+       nav ul li {
+           margin-left: 15px; /* 将导航项之间的间距缩小 */
+       }
+       nav ul li:last-child {
+           margin-left: 10px; /* 将最后一个导航项（求人情報）向左移动 */
+       }
+       nav ul li a {
+           text-decoration: none;
+           color: #fff;
+       }
+       nav {
+           margin-left: auto;
+       }
+       .video-container {
+           position: relative;
+           width: 100%;
+           height: 100vh;
+           overflow: hidden;
+       }
+       .video-container video {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+       }
+       .overlay {
+           position: absolute;
+           top: -50%;
+           left: 50%;
+           transform: translate(-50%, 0);
+           color: #fff;
+           font-size: 18px;
+           font-weight: bold;
+           text-align: center;
+           animation: drop 2s forwards;
+           z-index: 2; /* Add this */
+       }
+       @keyframes drop {
+           to {
+               top: 50%;
+               transform: translate(-50%, -50%);
+           }
+       }
+	   .bold-text {
+	       font-weight: bold;
+	       white-space: nowrap; /* 防止文本换行 */
+	   }
+       .content {
+           background-color: #fff;
+           padding: 20px;
+           text-align: center;
+           position: relative; /* Add this */
+           z-index: 1; /* Add this */
+       }
+       .content h3, .content h1, .content img {
+           text-align: center;
+       }
+       .content h3, .content h1 {
+           margin: 0;
+       }
+       .content img {
+           width: 50%;
+           height: auto;
+           margin: 0 auto;
+       }
+       .company-info {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           padding: 1px;
+       }
+       .company-info h2 {
+           margin: 0;
+       }
+       .company-info .text {
+           text-align: center;
+           padding: 10px;
+       }
+       .company-info img {
+           width: 100%;
+           height: auto;
+           margin: 0 auto;
+       }
+       footer {
+           background-color: rgba(0, 0, 0, 0.5);
+           color: white;
+           text-align: center;
+           padding: 10px;
+           display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+       }
+       footer a, footer .contact-info {
+           color: white;
+           margin: 5px 10px;
+           text-decoration: none;
+           flex: 1;
+           text-align: center;
+       }
+       /* Add this within your @media query for mobile screens */
+       .mobile-nav-toggle {
+           display: none;
+       }
+       @media only screen and (max-width: 600px) {
+           .mobile-nav-toggle {
+               display: block;
+               background: none;
+               border: none;
+               color: white;
+               font-size: 24px;
+           }
+           #primary-navigation[data-visible="false"] {
+               display: none;
+           }
+           #primary-navigation[data-visible="true"] {
+               display: block;
+               background-color: rgba(0, 0, 0, 0.8);
+               position: absolute;
+               top: 60px;
+               right: 20px;
+               width: 200px;
+               text-align: left;
+           }
+           #primary-navigation li {
+               margin: 10px 0;
+           }
+           #primary-navigation li a {
+               color: white;
+               text-decoration: none;
+           }
+           .content {
+               font-size: 14px; /* 缩小content部分的字体 */
+           }
+           .content img {
+               width: 50%;
+               height: auto;
+               margin: 0 auto;
+           }
+           .company-info .text {
+               font-size: 14px; /* 缩小company-info部分的字体 */
+           }
+       }
 
     </style>
 </head>
@@ -187,7 +190,7 @@ footer a, footer .contact-info {
         <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">≡</button>
         <nav>
             <ul id="primary-navigation" data-visible="false">
-                <li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;トップページ</a></li>
+                <li><a href="index.html">トップページ</a></li>
                 <li><a href="page2.html">&nbsp;&nbsp;&nbsp;&nbsp;会社案内</a></li>
                 <li><a href="page3.html">&nbsp;&nbsp;&nbsp;&nbsp;業務のご案内</a></li>
                 <li><a href="page4.html">&nbsp;&nbsp;&nbsp;&nbsp;求人情報&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
@@ -213,15 +216,39 @@ footer a, footer .contact-info {
     </div>
     <section id="about" class="company-info">
         <div class="text">
-            <img src="/chiharu0321.github.io/assets/104-D-cz6yXV.png" alt="Noimg">
-            <h2>社長からのご挨拶:</h2>
-            <p>私たちは，若い力を活かし，常に革新と挑戦を続けるネットワーク企業です。<br><br>
-            社员一人ひとりの成长を大切にし，自由な发想と强いチームワークで，お客様に最高の服务を提供することを目指しています。<br><br>
-            現代社会において，ネットワーク技術の発展は目覚ましく，私たちの生活やビジネスのあらゆる侧面に影响を与えています。<br><br>
-            株式会社千喜では，これらの技術を活用し，持続可能な未来を築くためのソリューションを提供してまいります。<br><br>
-            今後とも，皆様のご支援とご爱顧を賜りますようお願い申し上げます。<br><br><br>
-                                                                                                                                                            株式会社千喜<br>
-                                                                                                                                                                     代表取締役 鄒汶玲</p>
+            <img src="/chiharu0321.github.io/assets/104-D-cz6yXV.png" alt="Noimg"><br><br>
+            <h2> チャレンジ精神</h2>
+            
+                        <p class="bold-text">成長と挑戦                                                                                                                                                                                                                                            </p> <p>
+                                                                                                                       私たちは社員一人ひとりの成長と挑戦を大切にします。若い力を活かし、常に新しいことにチャレンジすることを推奨します。 </p><br>
+             <p class="bold-text">イノベーション                                                                                                                                                                                                                                        </p>  <p>
+                                                                                     若い力と柔軟な発想を持つ私たちは、常に革新を追求し、次世代のネットワークサービスを創造します。</p><br>
+            
+            <p class="bold-text">協力とチームワーク                                                                                                                                                                                                                                   </p>  <p>
+                                                                                                        20代、30代の若い社員たちが協力し合い、チームワークを重視して働くことで、高いパフォーマンスを発揮します。</p><br>
+            <p class="bold-text">顧客第一                                                                                                                                                                                                                                              </p>  <p>
+                                                                  私たちはお客様の満足を最優先に考え、常にお客様の期待を超えるサービスを提供します。</p><br>
+            <p class="bold-text">持続可能性                                                                                                                                                                                                                                             </p>  <p>
+                                                                   環境に優しいネットワークソリューションを提供し、持続可能な社会の実現を目指します。</p><br> 
+                </div>
+                    <div class="text">
+                        <h2> グループ経営方針<br></h2>
+            
+                        <p class="bold-text">お客様第一主義                                                                                                                                                                                                                                               </p>  <p>
+            			
+                                                                                お客様のニーズに応え、期待を超えるサービスを提供することを最優先とします。</p><br>
+            			<p class="bold-text">イノベーションの推進                                                                                                                                                                                                                                               </p>  <p>
+            			
+                                                                       常に新しい技術とアイデアを追求し、革新的なソリューションを提供します。</p><br>
+            			<p class="bold-text">社員の成長と幸福                                                                                                                                                                                                                                               </p>  <p>
+            			
+                                                             社員一人ひとりの成長と幸福を大切にし、働きやすい環境を整えます。</p><br>
+            			<p class="bold-text">持続可能な社会の実現                                                                                                                                                                                                                                              </p>  <p>
+            			
+                                                               環境に配慮した事業活動を推進し、持続可能な社会の実現に貢献します。</p><br>
+            			<p class="bold-text">信頼と透明性                                                                                                                                                                                                                                                          </p>  <p>
+                                                                        すべてのステークホルダーとの信頼関係を築き、透明性の高い経営を行います。<br><br><br>
+            			</p>
         </div>
     </section>
     <footer>
